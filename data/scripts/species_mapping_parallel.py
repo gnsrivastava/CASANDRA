@@ -22,8 +22,8 @@ if __name__ == '__main__':
 
     version_map = Species.set_index('species')['versions']
 
+    hdf_path = 'protein_chemical.links.with_string_version.hdf5'
     with ProcessPoolExecutor(initializer=_init_worker, initargs=(version_map,)) as pool:
-        chunks = list(pool.map(_process_chunk, df))
-
-    data = pd.concat(chunks, ignore_index=True)
-    data.to_hdf('protein_chemical.links.with_string_version.hdf5', key='data')
+        for i, result in enumerate(pool.imap(_process_chunk, df)):
+            result.to_hdf(hdf_path, key='data', mode='w' if i == 0 else 'a',
+                          append=True, format='table')

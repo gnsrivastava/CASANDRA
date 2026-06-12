@@ -14,4 +14,5 @@ Requirements:
 2. Number of unique chemicals in raw data before trimming for molecular weight: 64690525
 3. Number of unique chemicals after trimming: 61456131 (95%)
 4. Moelcular weight quantiles: [181.14548, 745.9257] Da
-
+5. Number of proteins in 2030 species: 9551145 (untrimmed)
+6. 
