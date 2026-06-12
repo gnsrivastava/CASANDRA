@@ -1,6 +1,6 @@
 # CASANDRA: Chemical Protein Association Score Predictor Using AI Agent Skills
 
-Requirements:
+## Requirements:
 1. python
 2. biopython
 3. Rdkit
