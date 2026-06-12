@@ -13,12 +13,5 @@ Requirements:
 1. Number of unique species dataset: 2030
 2. Number of unique chemicals in raw data before trimming for molecular weight: 64690525
 3. Number of unique chemicals after trimming: 61456131 (95%)
-### 1. Understanding chemicals in the dataset
+4. Moelcular weight quantiles: [181.14548, 745.9257] Da
 
-Moelcular weight quantiles 
-df["molecular_weight"].quantile(0.025)
-181.14548
->>> df["molecular_weight"].quantile(0.975)
-745.9257
-
-(5% total removed from both ends)

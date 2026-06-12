@@ -21,4 +21,5 @@ for chunk in df:
     chunks.append(chunk[chunk['string_version'] == chunk['_version']].drop(columns='_version'))
 
 data = pd.concat(chunks, ignore_index=True)
-data.to_hdf('protein_chemical.links.with_string_version.hdf5', key=data)
+
+data.to_hdf('protein_chemical.links.with_string_version.hdf5', key='data')
